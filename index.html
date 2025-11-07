@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Parsa Poosti — Python & AI-Focused Full-Stack Developer</title>
-  <meta name="description" content="Parsa Poosti: Python-first, AI-heavy full-stack developer. Functionality and security first, then refined UI.">
+  <title>Parsa Poosti — Python & AI Full-Stack Developer</title>
+  <meta name="description" content="Python-first, AI-savvy full-stack developer. Functionality and security first, then refined UI.">
   <meta name="theme-color" content="#0a84ff">
 
   <!-- Social -->
-  <meta property="og:title" content="Parsa Poosti — Python & AI-Focused Full-Stack Developer">
+  <meta property="og:title" content="Parsa Poosti — Python & AI Full-Stack Developer">
   <meta property="og:description" content="Functionality and security first. Then polish. Python, AI, clean APIs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://parsij.github.io/">
   <meta property="og:image" content="assets/og-card.svg">
 
-  <!-- Basic security hardening for static hosting (limited but helpful) -->
+  <!-- Basic CSP hardening (meta works on Pages, limited vs headers but still useful) -->
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="style.css" as="style">
@@ -40,7 +39,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header blur">
+  <header class="site-header">
     <div class="container">
       <a class="brand" href="#top" aria-label="Home">
         <svg class="brand-mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
@@ -62,47 +61,44 @@
 
   <main id="main">
     <section id="top" class="hero">
+      <!-- Decorative background must never block clicks -->
       <div class="hero-bg" aria-hidden="true"></div>
-      <div class="container">
-        <div class="split">
-          <div class="stack reveal">
-            <h1 class="display">Functionality and security first. Then polish.</h1>
-            <p class="lede">
-              I’m <strong>Parsa Poosti</strong>, a Python-first full-stack developer. I know AI like the back of my hand:
-              model integration, agents, inference pipelines, and safe deployment. I ship reliable backends, clean APIs,
-              and then obsess over the UI.
-            </p>
-            <ul class="pill-points">
-              <li>Secure by default: dependency hygiene, CSP, strict referrers</li>
-              <li>Python & AI: FastAPI, Flask, PyTorch, OpenAI tooling</li>
-              <li>Full-stack: React/TypeScript, Node when it’s the right tool, Postgres</li>
-            </ul>
-            <div class="cta-row">
-              <!-- Fixed: anchor link to #work -->
-              <a class="btn primary" href="#work">See my work</a>
-              <!-- Fixed: mailto link -->
-              <a class="btn ghost" href="mailto:Parsapoosti@gmail.com?subject=Project%20for%20Parsa&body=Hi%20Parsa%2C%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%20">Email me</a>
-              <!-- Fixed: external link with rel for safety -->
-              <a class="btn ghost" href="https://github.com/parsij" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
-          </div>
 
-          <div class="device-frame reveal" role="img" aria-label="Preview of featured project">
-            <div class="device-status"></div>
-            <div class="device-screen">
-              <div class="screen-gradient"></div>
-              <div class="screen-content">
-                <h3>Toadb</h3>
-                <p>ADB-powered transfer utility. Python-friendly workflows, robust error handling, clean CLI UX.</p>
-                <a class="btn tiny" href="https://github.com/parsij/toadb" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-              </div>
+      <div class="container hero-grid">
+        <div class="stack reveal">
+          <h1 class="display">Functionality and security first. Then polish.</h1>
+          <p class="lede">
+            I’m <strong>Parsa Poosti</strong>, a Python-first full-stack developer. I know AI like the back of my hand:
+            model integration, agents, inference pipelines, and safe deployment. I ship reliable backends and clean APIs,
+            then obsess over the UI.
+          </p>
+          <ul class="pill-points">
+            <li>Security by default: dependency hygiene, CSP</li>
+            <li>Python & AI: FastAPI, Flask, PyTorch, inference/agents</li>
+            <li>Full-stack: React/TypeScript, Postgres, job queues</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn primary" href="#work">See my work</a>
+            <a class="btn ghost" href="mailto:Parsapoosti@gmail.com?subject=Project%20for%20Parsa&body=Hi%20Parsa%2C%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%20">Email me</a>
+            <a class="btn ghost" href="https://github.com/parsij" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div class="device-frame reveal" role="img" aria-label="Preview of featured project">
+          <div class="device-status"></div>
+          <div class="device-screen">
+            <div class="screen-gradient" aria-hidden="true"></div>
+            <div class="screen-content">
+              <h3>Toadb</h3>
+              <p>ADB-powered transfer utility. Python-friendly workflows, robust error handling, clean CLI UX.</p>
+              <a class="btn tiny" href="https://github.com/parsij/toadb" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section">
+    <section id="work" class="section anchor-target">
       <div class="container">
         <div class="section-head reveal">
           <h2>Selected Work</h2>
@@ -111,7 +107,7 @@
 
         <div class="grid cards">
           <article class="card reveal">
-            <div class="card-media gradient"></div>
+            <div class="card-media gradient" aria-hidden="true"></div>
             <div class="card-body">
               <h3>Toadb</h3>
               <p>Device data workflows that don’t break. Tested flows, modular core, graceful failure.</p>
@@ -123,33 +119,29 @@
           </article>
 
           <article class="card reveal">
-            <div class="card-media gradient"></div>
+            <div class="card-media gradient" aria-hidden="true"></div>
             <div class="card-body">
               <h3>AI Pipeline Starter</h3>
-              <p>Inference pipeline with job queue, observability, and safe prompt/IO guards.</p>
+              <p>Inference pipeline with job queue, observability, and safe IO guards.</p>
               <div class="tags"><span>Python</span><span>FastAPI</span><span>Workers</span></div>
-              <div class="card-actions">
-                <a class="btn small" href="#" aria-disabled="true">Repo (private)</a>
-              </div>
+              <div class="card-actions"><a class="btn small" href="#" aria-disabled="true">Repo (private)</a></div>
             </div>
           </article>
 
           <article class="card reveal">
-            <div class="card-media gradient"></div>
+            <div class="card-media gradient" aria-hidden="true"></div>
             <div class="card-body">
               <h3>Full-Stack Starter</h3>
               <p>Auth, API routes, Postgres, and a clean UI kit. Sensible defaults, no bloat.</p>
-              <div class="tags"><span>React</span><span>Node</span><span>Postgres</span></div>
-              <div class="card-actions">
-                <a class="btn small" href="#" aria-disabled="true">Coming soon</a>
-              </div>
+              <div class="tags"><span>React</span><span>TypeScript</span><span>Postgres</span></div>
+              <div class="card-actions"><a class="btn small" href="#" aria-disabled="true">Coming soon</a></div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section alt">
+    <section id="about" class="section alt anchor-target">
       <div class="container">
         <div class="stack narrow reveal">
           <h2>About</h2>
@@ -175,13 +167,12 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section anchor-target">
       <div class="container">
         <div class="cta-panel reveal">
           <h2>Got a project?</h2>
           <p class="muted">Tell me what you’re building. I’ll keep it simple and ship fast.</p>
           <div class="cta-row">
-            <!-- Fixed: mailto link works everywhere supporting default mail client -->
             <a class="btn primary" href="mailto:Parsapoosti@gmail.com?subject=Project%20Inquiry&body=Hi%20Parsa%2C%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%20">Email Parsa</a>
             <a class="btn ghost" href="https://github.com/parsij" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
