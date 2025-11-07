@@ -3,19 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Parsa Poosti — Full‑Stack Developer</title>
-  <meta name="description" content="Portfolio of Parsa Poosti, a full‑stack developer crafting fast, elegant web apps.">
+  <title>Parsa Poosti — Python & AI-Focused Full-Stack Developer</title>
+  <meta name="description" content="Parsa Poosti: Python-first, AI-heavy full-stack developer. Functionality and security first, then refined UI.">
   <meta name="theme-color" content="#0a84ff">
-  <meta property="og:title" content="Parsa Poosti — Full‑Stack Developer">
-  <meta property="og:description" content="Portfolio of Parsa Poosti, a full‑stack developer crafting fast, elegant web apps.">
+
+  <!-- Social -->
+  <meta property="og:title" content="Parsa Poosti — Python & AI-Focused Full-Stack Developer">
+  <meta property="og:description" content="Functionality and security first. Then polish. Python, AI, clean APIs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://parsij.github.io/">
   <meta property="og:image" content="assets/og-card.svg">
+
+  <!-- Basic security hardening for static hosting (limited but helpful) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="style.css" as="style">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,10 +32,8 @@
     "name": "Parsa Poosti",
     "email": "mailto:Parsapoosti@gmail.com",
     "url": "https://parsij.github.io",
-    "sameAs": [
-      "https://github.com/parsij"
-    ],
-    "jobTitle": "Full‑Stack Developer"
+    "sameAs": ["https://github.com/parsij"],
+    "jobTitle": "Full-Stack Developer"
   }
   </script>
 </head>
@@ -48,7 +55,7 @@
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a class="btn small" href="assets/Parsa_Poosti_Resume.pdf" download>Résumé</a>
+        <a class="btn small" href="assets/Parsa_Poosti_Resume.pdf" download>Resume</a>
       </nav>
     </div>
   </header>
@@ -59,22 +66,35 @@
       <div class="container">
         <div class="split">
           <div class="stack reveal">
-            <h1 class="display">I build crisp, fast, human‑friendly web apps.</h1>
-            <p class="lede">I’m <strong>Parsa Poosti</strong>, a full‑stack developer focused on clear ideas, lean architecture, and delightful details. React, Node, Postgres, and clean APIs.</p>
+            <h1 class="display">Functionality and security first. Then polish.</h1>
+            <p class="lede">
+              I’m <strong>Parsa Poosti</strong>, a Python-first full-stack developer. I know AI like the back of my hand:
+              model integration, agents, inference pipelines, and safe deployment. I ship reliable backends, clean APIs,
+              and then obsess over the UI.
+            </p>
+            <ul class="pill-points">
+              <li>Secure by default: dependency hygiene, CSP, strict referrers</li>
+              <li>Python & AI: FastAPI, Flask, PyTorch, OpenAI tooling</li>
+              <li>Full-stack: React/TypeScript, Node when it’s the right tool, Postgres</li>
+            </ul>
             <div class="cta-row">
+              <!-- Fixed: anchor link to #work -->
               <a class="btn primary" href="#work">See my work</a>
-              <a class="btn ghost" href="mailto:Parsapoosti@gmail.com?subject=Project%20for%20Parsa">Email me</a>
-              <a class="btn ghost" href="https://github.com/parsij" rel="me noopener">GitHub</a>
+              <!-- Fixed: mailto link -->
+              <a class="btn ghost" href="mailto:Parsapoosti@gmail.com?subject=Project%20for%20Parsa&body=Hi%20Parsa%2C%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%20">Email me</a>
+              <!-- Fixed: external link with rel for safety -->
+              <a class="btn ghost" href="https://github.com/parsij" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
+
           <div class="device-frame reveal" role="img" aria-label="Preview of featured project">
             <div class="device-status"></div>
             <div class="device-screen">
               <div class="screen-gradient"></div>
               <div class="screen-content">
                 <h3>Toadb</h3>
-                <p>ADB‑powered roadblock data transfer utility with a clean CLI and robust error handling.</p>
-                <a class="btn tiny" href="https://github.com/parsij/toadb" target="_blank" rel="noopener">View on GitHub</a>
+                <p>ADB-powered transfer utility. Python-friendly workflows, robust error handling, clean CLI UX.</p>
+                <a class="btn tiny" href="https://github.com/parsij/toadb" target="_blank" rel="noopener noreferrer">View on GitHub</a>
               </div>
             </div>
           </div>
@@ -86,7 +106,7 @@
       <div class="container">
         <div class="section-head reveal">
           <h2>Selected Work</h2>
-          <p class="muted">A few projects that reflect my taste for simple interfaces and reliable backends.</p>
+          <p class="muted">Security and reliability lead. Design refines the result.</p>
         </div>
 
         <div class="grid cards">
@@ -94,12 +114,10 @@
             <div class="card-media gradient"></div>
             <div class="card-body">
               <h3>Toadb</h3>
-              <p>ADB tool that streamlines device data workflows. Solid CLI UX, modular codebase, tested flows.</p>
-              <div class="tags">
-                <span>Node</span><span>CLI</span><span>ADB</span>
-              </div>
+              <p>Device data workflows that don’t break. Tested flows, modular core, graceful failure.</p>
+              <div class="tags"><span>Python</span><span>CLI</span><span>ADB</span></div>
               <div class="card-actions">
-                <a class="btn small" href="https://github.com/parsij/toadb" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn small" href="https://github.com/parsij/toadb" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
@@ -107,13 +125,11 @@
           <article class="card reveal">
             <div class="card-media gradient"></div>
             <div class="card-body">
-              <h3>Full‑Stack Starter</h3>
-              <p>Production‑ready boilerplate with auth, API routes, and Postgres. Opinionated, not overbuilt.</p>
-              <div class="tags">
-                <span>React</span><span>Node</span><span>Postgres</span>
-              </div>
+              <h3>AI Pipeline Starter</h3>
+              <p>Inference pipeline with job queue, observability, and safe prompt/IO guards.</p>
+              <div class="tags"><span>Python</span><span>FastAPI</span><span>Workers</span></div>
               <div class="card-actions">
-                <a class="btn small" href="#" aria-disabled="true">Coming soon</a>
+                <a class="btn small" href="#" aria-disabled="true">Repo (private)</a>
               </div>
             </div>
           </article>
@@ -121,11 +137,9 @@
           <article class="card reveal">
             <div class="card-media gradient"></div>
             <div class="card-body">
-              <h3>Micro‑UI Kit</h3>
-              <p>Tiny component set for landing pages. Accessible, responsive, no dependencies.</p>
-              <div class="tags">
-                <span>CSS</span><span>Accessibility</span><span>Design</span>
-              </div>
+              <h3>Full-Stack Starter</h3>
+              <p>Auth, API routes, Postgres, and a clean UI kit. Sensible defaults, no bloat.</p>
+              <div class="tags"><span>React</span><span>Node</span><span>Postgres</span></div>
               <div class="card-actions">
                 <a class="btn small" href="#" aria-disabled="true">Coming soon</a>
               </div>
@@ -139,19 +153,22 @@
       <div class="container">
         <div class="stack narrow reveal">
           <h2>About</h2>
-          <p>I build for clarity and speed. My work follows three ideas: keep content first, use motion to explain not distract, and ship features that matter. Tooling wise I favor TypeScript, React, Node, Postgres, and clean CI.</p>
+          <p>
+            My hierarchy: security and correctness first, performance second, UI and motion to clarify last.
+            Python is home base; I reach for TypeScript/Node when it fits. I keep dep trees lean, CI honest, and docs short.
+          </p>
           <ul class="feature-list">
             <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l3 6.5L22 9l-5 4.9L18.2 21 12 17.8 5.8 21 7 13.9 2 9l7-0.5L12 2z"/></svg>
-              Thoughtful UX and crisp UI
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 100 18 9 9 0 000-18zm-1 13l-4-4 1.4-1.4L11 12.2l5.6-5.6L18 8l-7 8z"/></svg>
+              Security-minded: CSP, strict referrers, least privilege
             </li>
             <li>
               <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h14v2H5zm0-5h14v2H5zm0 10h14v2H5z"/></svg>
-              Clean APIs and maintainable code
+              Clean APIs: FastAPI/Flask, typed contracts, tests
             </li>
             <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 100 18 9 9 0 000-18zm-1 13l-4-4 1.4-1.4L11 12.2l5.6-5.6L18 8l-7 8z"/></svg>
-              Accessible, responsive, tested
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l3 6.5L22 9l-5 4.9L18.2 21 12 17.8 5.8 21 7 13.9 2 9l7-0.5L12 2z"/></svg>
+              UI that explains, not distracts
             </li>
           </ul>
         </div>
@@ -164,8 +181,9 @@
           <h2>Got a project?</h2>
           <p class="muted">Tell me what you’re building. I’ll keep it simple and ship fast.</p>
           <div class="cta-row">
+            <!-- Fixed: mailto link works everywhere supporting default mail client -->
             <a class="btn primary" href="mailto:Parsapoosti@gmail.com?subject=Project%20Inquiry&body=Hi%20Parsa%2C%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%20">Email Parsa</a>
-            <a class="btn ghost" href="https://github.com/parsij" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn ghost" href="https://github.com/parsij" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
@@ -174,7 +192,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Parsa Poosti · Built with care · <a href="https://github.com/parsij">GitHub</a></p>
+      <p>© <span id="year"></span> Parsa Poosti · Built with care · <a href="https://github.com/parsij" target="_blank" rel="noopener noreferrer">GitHub</a></p>
     </div>
   </footer>
 </body>
