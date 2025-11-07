@@ -1,7 +1,8 @@
-// Small enhancements: scroll reveal and current year
+// Year stamp
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Simple reveal-on-scroll
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -12,7 +13,3 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.14 });
 revealEls.forEach(el => io.observe(el));
-
-// Respect user color scheme in JS if needed later
-const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-console.log('Dark mode?', prefersDark);
