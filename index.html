@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Parsa Poosti • Portfolio</title>
+  <meta name="description" content="Parsa Poosti — Python, Java, C++, and full-stack development. Projects, skills, resume, and a live chatbot demo."/>
+  <meta name="theme-color" content="#0ea5e9"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div id="cursor-spotlight" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="logo tilt" href="#home" aria-label="Parsa Poosti home">
+        <span class="orb"></span><strong>Parsa Poosti</strong>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#chatbot">Chatbot</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button id="open-panel" class="btn ghost" aria-controls="panel" aria-expanded="false">Theme</button>
+        <a class="btn primary magnetic" href="mailto:parsapoosti@gmail.com?subject=Let%E2%80%99s%20work%20together">Hire me</a>
+      </div>
+    </div>
+  </header>
+
+  <aside id="panel" class="panel" aria-hidden="true">
+    <div class="panel-head">
+      <h3>Customize</h3>
+      <button id="close-panel" class="btn ghost" aria-label="Close">✕</button>
+    </div>
+    <div class="panel-body">
+      <label class="row">
+        <span>Theme</span>
+        <select id="theme-select">
+          <option value="neon">Neon</option>
+          <option value="sunrise">Sunrise</option>
+          <option value="forest">Forest</option>
+          <option value="mono">Mono</option>
+        </select>
+      </label>
+      <label class="row">
+        <span>Accent</span><input type="color" id="accent" value="#0ea5e9"/>
+      </label>
+      <label class="row">
+        <span>Mode</span>
+        <select id="mode">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+          <option value="auto">Auto</option>
+        </select>
+      </label>
+      <label class="row">
+        <span>Motion</span>
+        <select id="motion">
+          <option value="full">Full</option>
+          <option value="reduced">Reduced</option>
+        </select>
+      </label>
+      <button id="reset" class="btn outline">Reset</button>
+    </div>
+  </aside>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Python • Java • C++ • Automation</p>
+          <h1>Shipping useful software with <span class="grad">clarity</span> and <span class="grad-2">speed</span>.</h1>
+          <p class="lead">Backend-first developer who actually cares about DX and tests. Python is home base, but I also write robust Java and C++ when performance matters. <span id="typed"></span></p>
+          <div class="cta">
+            <a class="btn primary magnetic ripple" href="#projects">See projects</a>
+            <a class="btn outline ripple" href="#resume">Get resume</a>
+            <a class="btn ghost ripple" href="https://github.com/parsij" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><span class="num" data-count="5">0</span><span class="label">Years coding</span></div>
+            <div class="stat"><span class="num" data-count="30">0</span><span class="label">Repos</span></div>
+            <div class="stat"><span class="num" data-count="120">0</span><span class="label">Tests written</span></div>
+          </div>
+        </div>
+        <div class="hero-visual tilt">
+          <div class="blob parallax" data-speed="1.3"></div>
+          <div class="card3d parallax" data-speed="0.7">
+            <div class="card3d-face">
+              <span class="pulse"></span><span class="pulse"></span>
+              <div class="avatar">PP</div>
+              <p>Backend • APIs • Tooling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="track">
+          <span>Python • FastAPI • Flask • SQL • Docker • Testing • CI/CD • TypeScript • Java • C++ • WebSockets • Automation</span>
+          <span>Python • FastAPI • Flask • SQL • Docker • Testing • CI/CD • TypeScript • Java • C++ • WebSockets • Automation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHATBOT SHOWCASE -->
+    <section id="chatbot" class="section chatbot-section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Try one of my chatbots</h2>
+          <p class="muted">This demo is a live, visual-language model. I can tailor a chatbot like this for your business.</p>
+        </div>
+        <div class="chatbot-grid">
+          <article class="card tilt">
+            <h3>Qwen3 VL Demo</h3>
+            <p>Vision + language. Ask questions, drag in images, and iterate. If the embed is blocked, use the button.</p>
+            <div class="embed-wrap">
+              <div class="embed-fallback" id="embed-fallback">Loading demo…</div>
+              <iframe id="hf-embed" title="Qwen3 VL Demo" data-embed-src="https://huggingface.co/spaces/Qwen/Qwen3-VL-Demo?embed=1" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" loading="lazy" referrerpolicy="no-referrer" allow="clipboard-write" aria-label="Hugging Face demo"></iframe>
+            </div>
+            <div class="actions-row">
+              <a class="btn primary magnetic ripple" href="https://huggingface.co/spaces/Qwen/Qwen3-VL-Demo" target="_blank" rel="noopener">Open demo</a>
+              <button id="cta-business" class="btn outline ripple">Build this for my business</button>
+            </div>
+          </article>
+          <aside class="note card">
+            <h4>What I deliver</h4>
+            <ul>
+              <li>Custom chat UX with guardrails</li>
+              <li>API integrations and webhooks</li>
+              <li>File/image handling and memory</li>
+              <li>Deployment and monitoring</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <div class="filters">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="python">Python</button>
+            <button class="chip" data-filter="java">Java</button>
+            <button class="chip" data-filter="cpp">C++</button>
+            <button class="chip" data-filter="web">Web</button>
+            <button class="chip" data-filter="ml">ML</button>
+          </div>
+        </div>
+        <div id="project-grid" class="grid">
+          <article class="card project tilt" data-tags="python ml">
+            <h3>FastImage Pipeline</h3>
+            <p>Streaming image processing with asyncio. Built for throughput.</p>
+            <div class="tags"><span>Python</span><span>AsyncIO</span><span>Pillow</span></div>
+          </article>
+          <article class="card project tilt" data-tags="python web">
+            <h3>API Boilerplate</h3>
+            <p>Production-grade FastAPI starter with auth, tests, and CI.</p>
+            <div class="tags"><span>FastAPI</span><span>Docker</span><span>Testing</span></div>
+          </article>
+          <article class="card project tilt" data-tags="java ml">
+            <h3>VectorSearch JVM</h3>
+            <p>Approximate nearest neighbor service in Java with JNI bindings.</p>
+            <div class="tags"><span>Java</span><span>JNI</span><span>ANN</span></div>
+          </article>
+          <article class="card project tilt" data-tags="cpp perf">
+            <h3>CppFastCSV</h3>
+            <p>SIMD-accelerated CSV reader for C++ with zero-copy slices.</p>
+            <div class="tags"><span>C++</span><span>SIMD</span><span>Perf</span></div>
+          </article>
+        </div>
+        <p class="muted">Latest public repos from <a href="https://github.com/parsij" target="_blank" rel="noopener">parsij</a>:</p>
+        <div id="repo-grid" class="grid repos"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          <div>
+            <ul class="skill-list">
+              <li>Python (asyncio, FastAPI, Flask, Django)</li>
+              <li>Java (JVM performance, Spring basics)</li>
+              <li>C++ (modern C++17/20, perf-sensitive code)</li>
+              <li>Data tooling (Pandas, SQL)</li>
+              <li>Testing & quality (PyTest, JUnit, coverage)</li>
+              <li>TypeScript basics, REST, WebSockets</li>
+              <li>Docker, Linux, AWS basics</li>
+            </ul>
+          </div>
+          <div class="radar-wrap">
+            <canvas id="radar" width="360" height="300" aria-label="Skill radar chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Resume</h2>
+          <div class="resume-actions">
+            <a class="btn primary magnetic ripple" href="assets/resume.pdf" download="Parsa-Poosti-Resume.pdf">Download PDF</a>
+            <button id="copy-email" class="btn outline ripple">Copy email</button>
+          </div>
+        </div>
+        <article class="resume">
+          <header class="resume-head">
+            <h3>Parsa Poosti</h3>
+            <p>
+              <a href="mailto:parsapoosti@gmail.com">parsapoosti@gmail.com</a> ·
+              <a href="https://github.com/parsij" target="_blank" rel="noopener">github.com/parsij</a> ·
+              <a href="https://parsij.github.io" target="_blank" rel="noopener">https://parsij.github.io</a>
+            </p>
+          </header>
+          <section>
+            <h4>Summary</h4>
+            <p>Backend-first developer delivering stable APIs, automation, and performance-sensitive systems. Python primary, with production Java and C++ when needed.</p>
+          </section>
+          <section>
+            <h4>Experience</h4>
+            <ul>
+              <li><strong>Freelance Developer</strong>, Remote · 2023–2025
+                <ul>
+                  <li>Built FastAPI and Java microservices with auth and background jobs.</li>
+                  <li>Automated pipelines with Pandas + SQL and message queues.</li>
+                  <li>Delivered C++ modules for low-latency parsing and math.</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Projects</h4>
+            <ul>
+              <li>FastImage Pipeline · asyncio image jobs; 3x throughput.</li>
+              <li>API Boilerplate · batteries-included FastAPI starter.</li>
+              <li>CppFastCSV · SIMD CSV reader with zero-copy.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Skills</h4>
+            <p>Python, Java, C++, FastAPI, Flask, Django, SQL, Pandas, Docker, Git, CI/CD, TypeScript basics, REST, WebSockets.</p>
+          </section>
+          <section>
+            <h4>Education</h4>
+            <p>Self-directed study.</p>
+          </section>
+          <p class="muted">Updated November 08, 2025.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Tell me about your project. I reply quickly, and I actually read specs.</p>
+        <form class="contact" action="mailto:parsapoosti@gmail.com" method="post" enctype="text/plain">
+          <label><span>Name</span><input type="text" name="name" required/></label>
+          <label><span>Email</span><input type="email" name="email" required/></label>
+          <label class="full"><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button class="btn primary magnetic ripple" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2025 Parsa Poosti • Built with care and clean code</p>
+    </div>
+  </footer>
+</body>
+</html>
